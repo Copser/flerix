@@ -8,6 +8,9 @@ defmodule Flerix.MixProject do
       elixir: "~> 1.13",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
+      package: package(),
+      description: description(),
+      source: "https://github.com/Copser/flerix.git"
     ]
   end
 
@@ -24,6 +27,19 @@ defmodule Flerix.MixProject do
         x_auth_email: nil,
         x_auth_key: nil,
       ]
+    ]
+  end
+
+  defp description do
+    """
+    Flerix API Wrapper for Cloudeflare Stream large file uploads which is using Tus protocol.
+    Please note, this is very much a work in progress. Feel free to contribute using pull requests.
+    """
+  end
+
+  defp package do
+    [
+      licence: ["MIT"],
     ]
   end
 
