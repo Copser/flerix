@@ -18,8 +18,9 @@ defmodule Flerix.MixProject do
       extra_applications: [:httpoison, :json, :logger],
       env: [
         env: :dev,
-        cloudflare_url: "https://api.cloudflare.com",
+        cloudflare_url: "api.cloudflare.com/client/v4/accounts",
         api_token: nil,
+        account_id: nil,
         x_auth_email: nil,
         x_auth_key: nil,
       ]
